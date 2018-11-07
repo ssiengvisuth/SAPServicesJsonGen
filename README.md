@@ -45,7 +45,9 @@ The Drupal stack consist of the following containers:
 Supported Drupal versions: 8 / 7
 
 [wireframe]
+
 [visuals]
+
 
 ## Documentation
 

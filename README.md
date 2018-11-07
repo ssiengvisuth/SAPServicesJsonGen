@@ -44,7 +44,8 @@ The Drupal stack consist of the following containers:
 
 Supported Drupal versions: 8 / 7
 
-[prototype]
+[wireframe]
+[visuals]
 
 ## Documentation
 
@@ -111,4 +112,5 @@ This project is licensed under the MIT open source license.
 [wodby/xhprof]: https://hub.docker.com/r/wodby/xhprof
 
 
-[prototype]: https://xd.adobe.com/view/6748ada9-bc9b-4bbf-64f5-368d7c93768c-1179/
+[wireframe]: https://xd.adobe.com/view/6748ada9-bc9b-4bbf-64f5-368d7c93768c-1179/
+[visuals]: https://xd.adobe.com/view/982bf274-5794-456c-4fb1-f0d4c12e9e2a-ee1a

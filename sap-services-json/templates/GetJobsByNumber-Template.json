@@ -1,0 +1,36 @@
+[
+  {
+    errorCode: "0000",
+    errorDescription: "SUCCESS",
+    projectNumber: "{{integer(1000000000, 999999999)}}",
+    contractorName: "{{company()}}",
+	addressLine1: "{{integer(1000, 9999)}} {{street()}}",
+	addressLine2: "",
+	city: "{{city()}}",
+	state: "CA",
+	zipCode: "{{integer(90000,92999)}}",
+	startDate: "{{date()}}",
+	primaryContactName: "{{firstName()}} {{surname()}}",
+	primaryContactPhone: "{{phone('xxx-xxx-xxxx')}}",
+    jobs: [
+      {
+		'repeat(5,25)': {
+          jobNumber: '{{index(10000000)}}',
+          addressLine1: "{{integer(1000, 9999)}} {{street()}}",
+		  addressLine2: "",
+		  city: "{{city()}}",
+		  state: "CA",
+		  zipCode: "{{integer(90000,92999)}}",
+          description: "{{lorem(10, 'words')}}",
+          jobPhase: "{{integer(0,5)}}",
+          jobPhaseLabel() {
+            const jobLabels = ['N/A','Initiate','Planning & Engineering',
+                               'Final Design','Pre-Construction','Complete'];
+            return jobLabels[this.jobPhase];
+          },
+          jobStatusDetails: "{{lorem(5, 'words')}}"
+        }
+      }
+    ]
+  }
+]

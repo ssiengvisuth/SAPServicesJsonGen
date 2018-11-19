@@ -1,0 +1,11 @@
+GetJobsByNumber
+URL:  https://next.json-generator.com/NkeoAGh6H
+JSON: https://next.json-generator.com/api/json/get/NkeoAGh6H
+
+GetJobDetailsByNumber - Single Home
+URL:  https://next.json-generator.com/NJL1k73pS
+JSON: https://next.json-generator.com/api/json/get/NJL1k73pS
+
+GetJobDetailsByNumber - Multi-Units Building
+URL:  https://next.json-generator.com/V1qNxm3aH
+JSON: https://next.json-generator.com/api/json/get/V1qNxm3aH

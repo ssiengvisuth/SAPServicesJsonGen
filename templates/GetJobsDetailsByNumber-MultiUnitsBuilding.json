@@ -1,0 +1,40 @@
+[
+  {
+    errorCode: "0000",
+    errorDescription: "SUCCESS",
+    jobNumber: '{{integer(10000000,99999999)}}',
+    jobTypeCode: "B",
+    jobDescription: "{{lorem(10, 'words')}}",
+    masterServiceOrder: "{{lorem(15, 'words')}}",
+	projectManagerName: "{{firstName()}} {{surname()}}",
+	projectManagerPhone: "{{phone('xxx-xxx-xxxx')}}",
+    projectManagerEmail() {
+      var pmName = this.projectManagerName.toLowerCase().split(' ');
+      
+      return pmName[0].charAt(0) + pmName[1] + '@semprautilities.com';
+    },
+    inspectorName: "{{company()}}",
+	inspectorPhone: "{{phone('xxx-xxx-xxxx')}}",
+	warningMessage: "{{lorem(15, 'words')}}",
+    meters: [
+      {
+		'repeat(10,50)': {
+          lotNumber: "{{integer(100,5000)}}",
+          meterType() {
+            return bool()?"E":"G";
+          },
+          addressLine1: "{{integer(1000, 9999)}} {{street()}}",
+		  addressLine2: "",
+		  city: "{{city()}}",
+		  state: "CA",
+		  zipCode: "{{integer(90000,92999)}}",
+          progress: "{{integer(0,3)}}",
+          billingAppReceived() {
+            return bool()?"Y":"N";
+          },
+		  meterSetDate: "{{date()}}"
+        }
+      }
+    ]
+  }
+]

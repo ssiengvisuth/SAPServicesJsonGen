@@ -1,0 +1,60 @@
+[
+  {
+    errorCode: "0000",
+    errorDescription: "SUCCESS",
+    jobNumber: '{{integer(10000000,99999999)}}',
+    jobTypeCode: "H",
+    jobDescription: "{{lorem(10, 'words')}}",
+    masterServiceOrder: "",
+	projectManagerName: "{{firstName()}} {{surname()}}",
+	projectManagerPhone: "{{phone('xxx-xxx-xxxx')}}",
+    projectManagerEmail() {
+      var pmName = this.projectManagerName.toLowerCase().split(' ');
+      
+      return pmName[0].charAt(0) + pmName[1] + '@semprautilities.com';
+    },
+    inspectorName: "{{company()}}",
+	inspectorPhone: "{{phone('xxx-xxx-xxxx')}}",
+	warningMessage: "{{lorem(15, 'words')}}",
+    phases: [
+      {
+		'repeat(5)': {
+          phaseNumber: "{{index(1)}}",
+          phaseName() {
+            const jobLabels = ['N/A','Initiate','Planning & Engineering',
+                               'Final Design','Pre-Construction','Complete'];
+            return jobLabels[this.phaseNumber];
+          },
+          phaseDescription: "{{lorem(20, 'words')}}",
+          submitDate: "{{date()}}",
+          welcomePackageSentDate: "{{date()}}",
+          engineeringFeesRequired() {
+            return bool()?"Y":"N";
+          },
+          engineeringFeesPaidDate: "{{date()}}",
+          afsDate: "{{date()}}",
+          planningActivities: "{{lorem(5, 'words')}}",
+          prelimDesignSentDate: "{{date()}}",
+          prelimDesignAcceptedDate: "{{date()}}",
+          finalDesignDescription: "{{lorem(10, 'words')}}",
+          rigtOfWayDate: "{{date()}}",
+          permitsDate: "{{date()}}",
+          environmentalReviewsRequired() {
+            return bool()?"Y":"N";
+          },
+          environmentalReviewsDate: "{{date()}}",
+          contractSentDate: "{{date()}}",
+          contractSignedDate: "{{date()}}",
+          workOrderFeesDate: "{{date()}}",
+          preConApprovedDate: "{{date()}}",
+          preConMeetingDate: "{{date()}}",
+          sdgeInspectionDate: "{{date()}}",
+          releasedForConDate: "{{date()}}",
+          constructionApprovedDate: "{{date()}}",
+          customerScheduleDate: "{{date()}}",
+          energizeDate: "{{date()}}",
+        }
+      }
+    ]
+  }
+]
